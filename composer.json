@@ -32,6 +32,6 @@
             "Happyr\\Google\\AnalyticsBundle\\": ""
         }
     },
-    "target-dir": "Niwa/Google/AnalyticsBundle"
+    "target-dir": "Happyr/Google/AnalyticsBundle"
 }
 
