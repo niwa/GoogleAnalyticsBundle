@@ -8,6 +8,10 @@ the [Measurement Protocol][devguide]
 This is not a library to pull data from Google analytics. That feature is deprecated from the `classic-analytics` branch.
 The master branch and version 3 and above will be supporting Google analytics universal.
 
+## About this Fork
+
+This forks removes the dependency on any specific HTTP client for the communication to GA but it defines an Interface that should be use for this purpose. Because this feature, there is an extra step (#4) under the usage section. 
+
 ## Special feature
 
 This bundle has a special feature. Say that you want to post data to Analytics. You want to post an event every time someone downloads a file. You may do that from the server like any other library. When looking at the reports you will find that you are missing the information about the actual user for the download event. You can not use a segment to find out which referal the user came from. 
@@ -64,6 +68,21 @@ happyr_google_analytics:
     // ...
     tracking_id: UA-XXXX-Y
 ```
+
+### Step 4: Specify your http client
+
+
+This bundles uses a dummy http client that it need to be overwritten. It must implements `GoogleAnalyticsBundle/Http/HttpClientInterface`
+The `send` function should create a POST request to the endpoint defined under `happyr_google_analytics: endpoint`
+
+``` yaml
+# app/config/config.yml
+
+parameters:
+    // ...
+    ga_http_client_service: "@http_cliente_service"
+```
+
 
 ## Fetching data
 
