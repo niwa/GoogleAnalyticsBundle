@@ -1,5 +1,5 @@
 {
-    "name": "happyr/google-analytics-bundle",
+    "name": "niwa/google-analytics-bundle",
     "type": "symfony-bundle",
     "description": "The Google Analytics Bundle lets you send data (like event tracking) to Google.",
     "keywords": ["Google", "Analytics", "Google Analytics"],
@@ -9,12 +9,19 @@
         {
             "name": "Tobias Nyholm",
             "email": "tobias@happyr.com"
+        },
+        {
+            "name": "NIWA Software Devloper Team",
+            "email": "sdt@niwa.co.nz"
+        },
+        {
+            "name": "Gaspar Zaragoza",
+            "email": "gasparmdq@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.3.17",
         "symfony/yaml": "2.*",
-        "guzzlehttp/guzzle": "~5.0",
         "symfony/framework-bundle": "~2.3"
     },
     "suggest": {

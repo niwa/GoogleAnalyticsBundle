@@ -37,10 +37,6 @@ class HappyrGoogleAnalyticsExtension extends Extension
         $trackerDef->replaceArgument(2, $config['tracking_id'])
             ->replaceArgument(3, $config['version']);
 
-        if (!$config['enabled']) {
-            $trackerDef->replaceArgument(0, new Reference('happyr.google.analytics.http.dummy'));
-        }
-
         if ($config['fetching']['cache_service']) {
             $container->getDefinition('happyr.google.analytics.data_fetcher')
                 ->replaceArgument(0, new Reference($config['fetching']['cache_service']));
