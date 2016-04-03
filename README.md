@@ -71,17 +71,8 @@ happyr_google_analytics:
 
 ### Step 4: Specify your http client
 
-
 This bundles uses a dummy http client that it need to be overwritten. It must implements `GoogleAnalyticsBundle/Http/HttpClientInterface`
 The `send` function should create a POST request to the endpoint defined under `happyr_google_analytics: endpoint`
-
-``` yaml
-# app/config/config.yml
-
-parameters:
-    // ...
-    ga_http_client_service: "@http_cliente_service"
-```
 
 
 ## Fetching data
