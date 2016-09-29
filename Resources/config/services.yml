@@ -6,9 +6,9 @@ parameters:
   happyr.google.analytics.data_fetcher.class: 'Happyr\Google\AnalyticsBundle\Service\DataFetcher'
 
 services:
-  happyr.google_analytics.tracker:
+  happyr.google.analytics.tracker:
     class: Happyr\GoogleAnalyticsBundle\Service\Tracker
-    arguments: ["@niwa.google.analytics.http.client", "@happyr.google_analytics.clientIdProvider", ~, ~]
+    arguments: ["@niwa.google.analytics.http.client", "@happyr.google.analytics.clientIdProvider", ~, ~]
 
   happyr.google.analytics.http:
     class: %happyr.google.analytics.http.dummy.class%
