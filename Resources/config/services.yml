@@ -7,7 +7,7 @@ parameters:
 
 services:
   happyr.google.analytics.tracker:
-    class: Happyr\GoogleAnalyticsBundle\Service\Tracker
+    class: Happyr\Google\AnalyticsBundle\Service\Tracker
     arguments: ["@niwa.google.analytics.http.client", "@happyr.google.analytics.clientIdProvider", ~, ~]
 
   happyr.google.analytics.http:
