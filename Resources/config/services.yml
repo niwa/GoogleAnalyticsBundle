@@ -28,11 +28,11 @@ services:
     arguments: [@happyr.google.analytics.cache.dummy, ~, %happyr.google.analytics.param.view_id%, %happyr.google.analytics.param.cache_lifetime%]
 
   niwa.google.analytics.tracker:
-    class: Happyr\GoogleAnalyticsBundle\Service\GATrackerService
+    class: Happyr\Google\AnalyticsBundle\Service\GATrackerService
     arguments: ['@happyr.google.analytics.tracker', '@request_stack']
 
   niwa.google.analytics.http.client:
-    class: Happyr\GoogleAnalyticsBundle\Http\NiwaHttpClient
+    class: Happyr\Google\AnalyticsBundle\Http\NiwaHttpClient
     arguments:
       - '@niwa.utilities.curl'
       - '%happyr.google.analytics.param.endpoint%'
