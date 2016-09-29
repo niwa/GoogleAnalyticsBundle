@@ -1,8 +1,8 @@
 <?php
 
-namespace Happyr\GoogleAnalyticsBundle\Tests\Service;
+namespace Happyr\Google\AnalyticsBundle\Tests\Service;
 
-use Happyr\GoogleAnalyticsBundle\Service\GATrackerService;
+use Happyr\Google\AnalyticsBundle\Service\GATrackerService;
 use Symfony\Component\HttpFoundation\Request;
 
 class GATrackerServiceTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +34,7 @@ class GATrackerServiceTest extends \PHPUnit_Framework_TestCase
             ->willReturn($request);
 
 
-        $tracker = $this->getMockBuilder('Happyr\GoogleAnalyticsBundle\Service\Tracker')
+        $tracker = $this->getMockBuilder('Happyr\Google\AnalyticsBundle\Service\Tracker')
             ->setMethods(array('send'))
             ->disableOriginalConstructor()
             ->getMock();

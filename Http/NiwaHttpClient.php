@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\GoogleAnalyticsBundle\Http;
+namespace Happyr\Google\AnalyticsBundle\Http;
 
 use Niwa\UtilitiesBundle\Services\CurlInterface;
 

@@ -1,8 +1,7 @@
 <?php
 
-namespace Happyr\GoogleAnalyticsBundle\Service;
+namespace Happyr\Google\AnalyticsBundle\Service;
 
-use Happyr\GoogleAnalyticsBundle\Service\Tracker;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class GATrackerService

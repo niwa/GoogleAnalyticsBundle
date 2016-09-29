@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\GoogleAnalyticsBundle\Tests\Http;
+namespace Happyr\Google\AnalyticsBundle\Tests\Http;
 
 use Niwa\UtilitiesBundle\Tests\Mock\MockCurl;
 
@@ -17,7 +17,7 @@ class NiwaHttpClientTest extends \PHPUnit_Framework_TestCase
         );
         $curlMock = new MockCurl('');
 
-        $httpClient=$this->getMockBuilder('Happyr\GoogleAnalyticsBundle\Http\NiwaHttpClient')
+        $httpClient=$this->getMockBuilder('Happyr\Google\AnalyticsBundle\Http\NiwaHttpClient')
             ->setMethods(array('getClient'))
             ->setConstructorArgs(array($curlMock, $endpoint, false, 1))
             ->getMock();
