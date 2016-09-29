@@ -39,10 +39,9 @@
             "Happyr\\Google\\AnalyticsBundle\\": ""
         }
     },
-    "target-dir": "Happyr/Google/AnalyticsBundle"
-    },
     "config": {
         "secure-http": false
-    }
+    },
+    "target-dir": "Happyr/Google/AnalyticsBundle"
 }
 
