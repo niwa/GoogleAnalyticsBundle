@@ -7,8 +7,8 @@ parameters:
 
 services:
   happyr.google.analytics.tracker:
-    class: %happyr.google.analytics.tracker.class%
-    arguments: [@happyr.google.analytics.http, @happyr.google.analytics.clientIdProvider, ~, ~]
+    class: Happyr\Google\AnalyticsBundle\Service\Tracker
+    arguments: ["@niwa.google.analytics.http.client", "@happyr.google.analytics.clientIdProvider", ~, ~]
 
   happyr.google.analytics.http:
     class: %happyr.google.analytics.http.dummy.class%
@@ -27,3 +27,14 @@ services:
     class: %happyr.google.analytics.data_fetcher.class%
     arguments: [@happyr.google.analytics.cache.dummy, ~, %happyr.google.analytics.param.view_id%, %happyr.google.analytics.param.cache_lifetime%]
 
+  niwa.google.analytics.tracker:
+    class: Happyr\Google\AnalyticsBundle\Service\GATrackerService
+    arguments: ['@happyr.google.analytics.tracker', '@request_stack']
+
+  niwa.google.analytics.http.client:
+    class: Happyr\Google\AnalyticsBundle\Http\NiwaHttpClient
+    arguments:
+      - '@niwa.utilities.curl'
+      - '%happyr.google.analytics.param.endpoint%'
+      - '%happyr.google.analytics.param.fireAndForget%'
+      - '%happyr.google.analytics.param.requestTimeout%'

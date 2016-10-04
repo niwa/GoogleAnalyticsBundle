@@ -19,10 +19,17 @@
             "email": "gasparmdq@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://svn.niwa.co.nz/repos/sdt/symfony_bundles/UtilitiesBundle"
+        }
+    ],
     "require": {
         "php": ">=5.3.17",
         "symfony/yaml": "2.*",
-        "symfony/framework-bundle": "~2.3"
+        "symfony/framework-bundle": "~2.3",
+        "niwa/utilities-bundle": "1.01.*"
     },
     "suggest": {
         "happyr/google-site-authenticator-bundle": "To be able to fetch data from google analytics."
@@ -31,6 +38,9 @@
         "psr-0": {
             "Happyr\\Google\\AnalyticsBundle\\": ""
         }
+    },
+    "config": {
+        "secure-http": false
     },
     "target-dir": "Happyr/Google/AnalyticsBundle"
 }
