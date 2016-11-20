@@ -2,7 +2,7 @@
 
 namespace Happyr\Google\AnalyticsBundle\Http;
 
-use Niwa\UtilitiesBundle\Services\CurlInterface;
+use Niwa\UtilitiesBundle\Interfaces\CurlInterface;
 
 
 class NiwaHttpClient implements HttpClientInterface
