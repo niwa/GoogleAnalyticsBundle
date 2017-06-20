@@ -11,7 +11,7 @@
             "email": "tobias@happyr.com"
         },
         {
-            "name": "NIWA Software Devloper Team",
+            "name": "NIWA IT Systems Development Team",
             "email": "sdt@niwa.co.nz"
         },
         {
@@ -29,7 +29,7 @@
         "php": ">=5.3.17",
         "symfony/yaml": "2.*",
         "symfony/framework-bundle": "~2.3",
-        "niwa/utilities-bundle": "^1.01.0"
+        "niwa/utilities-bundle": "^1.02.0"
     },
     "suggest": {
         "happyr/google-site-authenticator-bundle": "To be able to fetch data from google analytics."
